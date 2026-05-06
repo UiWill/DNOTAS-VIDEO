@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSubscription } from "@/hooks/useSubscription";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,7 @@ interface SubscriptionGateProps {
 export function SubscriptionGate({ children }: SubscriptionGateProps) {
   const { isAdmin, isMark, signOut, refreshRoles } = useAuth();
   const { isActive, isPending, isLoading, daysRemaining, refetch } = useSubscription();
+  const navigate = useNavigate();
   const [checking, setChecking] = useState(false);
   const paymentLink = "https://pay.looma.app.br/PPWJ0J?plan=y2p7xj5l";
 
@@ -48,7 +50,7 @@ export function SubscriptionGate({ children }: SubscriptionGateProps) {
 
   const handleLogout = async () => {
     await signOut();
-    window.location.assign("/auth");
+    navigate("/auth", { replace: true });
   };
 
   return (

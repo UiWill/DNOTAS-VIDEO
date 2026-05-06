@@ -38,7 +38,7 @@ const Index = () => {
 
       toast.success("Login realizado com sucesso!");
       // Evita race-condition entre navegação e atualização do AuthProvider em produção
-      window.location.assign("/dashboard");
+      navigate("/dashboard", { replace: true });
     } catch (error: any) {
       toast.error(error.message || "Erro ao fazer login");
     } finally {

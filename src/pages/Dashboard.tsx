@@ -172,7 +172,7 @@ const Dashboard = () => {
   const handleLogout = async () => {
     await signOut();
     // Force full page reload to ensure session is properly cleared
-    window.location.assign("/auth");
+    navigate("/auth", { replace: true });
   };
 
   const handleDeleteRoom = async (roomId: string, roomTitle: string) => {
