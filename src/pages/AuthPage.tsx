@@ -180,22 +180,21 @@ const AuthPage = () => {
         }}
       />
       
-      {/* Overlay com gradiente nas cores da logo */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(43,90%,55%)]/25 via-background/70 to-[hsl(43,90%,40%)]/15" />
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Overlay escuro minimalista */}
+      <div className="absolute inset-0 bg-black/65" />
       
       <div className="relative z-10 flex flex-grow items-center justify-center px-4 py-10">
         <Card className="glass-panel w-full max-w-md border border-border/80 shadow-xl animate-fade-in">
           <CardHeader className="space-y-4 text-center">
             {/* Logo maior */}
-            <div className="mx-auto">
+            <div className="mx-auto inline-block bg-black rounded-xl overflow-hidden p-3">
               <img
                 src={logo}
                 alt="DNOTAS TREINAMENTOS"
-                className="h-40 w-auto object-contain"
+                className="h-32 w-auto object-contain"
                 decoding="async"
                 width={160}
-                height={160}
+                height={128}
               />
             </div>
             <div className="space-y-1">

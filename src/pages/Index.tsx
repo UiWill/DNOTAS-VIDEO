@@ -59,23 +59,24 @@ const Index = () => {
         }}
       />
       
-      {/* Overlay com gradiente nas cores da logo */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(43,90%,55%)]/25 via-background/70 to-[hsl(43,90%,40%)]/15" />
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Overlay escuro minimalista */}
+      <div className="absolute inset-0 bg-black/65" />
 
       {/* Card de login */}
       <div className="relative z-10 w-full max-w-md px-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
         <div className="rounded-xl border border-border/50 bg-card/95 backdrop-blur-sm p-8 shadow-2xl">
           {/* Logo */}
           <div className="flex justify-center mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <img 
-              src={logo} 
-              alt="DNOTAS TREINAMENTOS"
-              className="h-52 w-auto object-contain"
-              decoding="async"
-              width={208}
-              height={208}
-            />
+            <div className="bg-black rounded-xl overflow-hidden p-3">
+              <img
+                src={logo}
+                alt="DNOTAS TREINAMENTOS"
+                className="h-40 w-auto object-contain"
+                decoding="async"
+                width={208}
+                height={160}
+              />
+            </div>
           </div>
 
           {/* Título */}
@@ -138,15 +139,17 @@ const Index = () => {
           {/* Footer */}
           <div className="mt-10 flex flex-col items-center gap-4 text-sm text-muted-foreground opacity-0 animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
             <span className="text-xs">Desenvolvido por:</span>
-            <img 
-              src={logo} 
-              alt="DNOTAS TREINAMENTOS"
-              className="h-28 w-auto object-contain"
-              loading="lazy"
-              decoding="async"
-              width={112}
-              height={112}
-            />
+            <div className="bg-black rounded-lg overflow-hidden p-2">
+              <img
+                src={logo}
+                alt="DNOTAS TREINAMENTOS"
+                className="h-16 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+                width={112}
+                height={64}
+              />
+            </div>
             <p className="text-[10px] text-muted-foreground/60">
               © {new Date().getFullYear()} DNOTAS TREINAMENTOS
             </p>
