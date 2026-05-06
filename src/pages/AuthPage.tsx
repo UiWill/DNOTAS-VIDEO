@@ -200,7 +200,7 @@ const AuthPage = () => {
             </div>
             <div className="space-y-1">
               <CardTitle className="text-2xl font-bold tracking-tight">
-                {mode === "login" ? "Dinheiro todo dia" : "Criar conta"}
+                {mode === "login" ? "Treinamentos e Tutoriais Exclusivos" : "Criar conta"}
               </CardTitle>
               <p className="text-sm text-muted-foreground">
                 {mode === "login" 

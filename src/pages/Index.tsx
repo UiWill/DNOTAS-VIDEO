@@ -80,7 +80,7 @@ const Index = () => {
 
           {/* Título */}
           <h1 className="text-center text-2xl font-semibold text-foreground mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-            Dinheiro todo dia
+            Treinamentos e Tutoriais Exclusivos
           </h1>
 
           {/* Formulário */}
