@@ -149,8 +149,7 @@ const AuthPage = () => {
           throw error;
         }
         toast({ title: "Bem-vindo(a)", description: "Login realizado com sucesso." });
-        // Evita race-condition entre navegação e atualização do AuthProvider em produção
-        window.location.assign("/dashboard");
+        navigate("/dashboard", { replace: true });
       }
     } catch (err) {
       const message = err instanceof Error ? err.message : "Não foi possível completar a operação.";
